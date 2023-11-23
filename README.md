@@ -1,4 +1,4 @@
-# README splitPrint
+# splitPrint README
 
 An add-on to mvs-tk5 to create separate print files from jobs printed on JES printers
 
@@ -37,22 +37,33 @@ line in tk5.cnf that defines 000F.
 
 ## Usage
 
-Replace the contents of `README.md` with your project's:
+- In out of the box TK5 all output from a JES printer
+  ends up in prt00e.txt or prt00f.txt. I prefer having
+  the spooled print output from each job end up in a
+  file of its own. splitPrint will do this for you.
+  When installed properly, your print output will still
+  go to the prt folder but each job will have a unique name.
 
-- Name: split
-- Description
-- Installation instructions
-- Usage instructions
-- Support instructions
-- Contributing instructions
-- Licence
+  For example:
 
-Feel free to remove any sections that aren't applicable to your project.
+  TSO-STC00165-12_53_32.txt
+  MF1-STC00182-10_08_12.txt
+
+- Please note:
+  splitPrint will only work properly if you have NOT
+  changed the JES2 configuration. In particular 
+  the parameters that control how the print file
+  banners are formatted. This is because the
+  splitPrint Go program has certain tests for end
+  of report hardcoded, and changes to how the banners
+  are formatted will prevent splitPrint from breaking
+  the print output properly. 
+
 
 ## Support
 
-Please [open an issue](https://github.com/SYSPROG-JLS/splitPrint) for support.
+Please [open an issue](https://github.com/SYSPROG-JLS/splitPrint/issues) for support.
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/SYSPROG-JLS/splitPrint/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/SYSPROG-JLS/splitPrint/pulls).
