@@ -37,10 +37,10 @@ line in tk5.cnf that defines 000F.
 
 ## Usage
 
-- In out of the box TK5 all output from a JES printer
-  ends up in prt00e.txt or prt00f.txt. I prefer having
-  the spooled print output from each job end up in a
-  file of its own. splitPrint will do this for you.
+- Out of the box MVS-TK5 is configured for all output 
+  from a JES printer ending up in prt00e.txt or prt00f.txt. 
+  I prefer having the spooled print output from each job 
+  end up in a file of its own. splitPrint will do this for you.
   When installed properly, your print output will still
   go to the prt folder but each job will have a unique name.
 
